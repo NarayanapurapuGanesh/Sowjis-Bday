@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Protected Redirect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="password"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 10px;
+        }
+        input[type="button"] {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            const passwordInput = document.getElementById('password').value;
+            const correctPassword = 'doctorls'; // Set your desired password here
+
+            if (passwordInput === correctPassword) {
+                // Redirect to the desired webpage
+                window.location.href = "Memories.html"; // Replace with your target URL
+            } else {
+                alert('Incorrect password. Please try again.');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Enter Password to Access</h2>
+    <input type="password" id="password" placeholder="Password" required>
+    <input type="button" value="Submit" onclick="checkPassword()">
+</div>
+
+</body>
+</html>
